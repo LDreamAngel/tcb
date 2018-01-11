@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#container {
+				border: solid 2px saddlebrown;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container" style="width:600px; height:600px"></div>
+	</body>
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.3&key=ce4a19b75bdc8dcbd143b6abc9f3f2da"></script>
+	<script type="text/javascript">
+		var map = new AMap.Map('container', {
+			resizeEnable: true,
+			zoom: 11,
+			center: [90, 39.90923]
+		});
+		map.plugin(["AMap.ToolBar"], function() {
+			map.addControl(new AMap.ToolBar());
+		});
+		var marker = new AMap.Marker({
+        icon : icon,//24px*24px
+        position : provinces[i].center.split(','),
+        offset : new AMap.Pixel(-12,-12),
+        map : mapObj
+});
+	</script>
+
+</html>

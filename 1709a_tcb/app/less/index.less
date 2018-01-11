@@ -1,0 +1,357 @@
+/*设置全局样式*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    position: relative;
+    background-color: #F7F7F7;
+}
+/*设置全局样式*/
+a {
+    color: #3b3b3b;
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.mpsever,
+header,
+nav,
+section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/*头部*/
+header {
+    height: 3rem;
+    padding-top: 0.4rem;
+    border: solid 1px grey;
+    background-color: #F6F6F6;
+    font-size: 1.3rem;
+    .header_left {
+        float: left;
+        //      border: solid 1px green;
+        span {
+            color: green;
+            display: inline-block;
+            border-right: solid 1px #D2D2D2;
+            padding-right: 10px;
+        }
+    }
+    ul {
+        float: right;
+        //      border: solid 1px green;
+        display: flex;
+        li {
+            a {
+                display: inline-block;
+                border-right: solid 1px #D2D2D2;
+                margin-left: 7px;
+                padding-right: 10px;
+            }
+        }
+        li:last-of-type a {
+            border: 0;
+        }
+    }
+}
+
+/*导航栏部分*/
+nav {
+    height: 8rem;
+    font-size: 1.6rem;
+    background-color: white;
+    border: solid 1px green;
+    h1 {
+        width: 16.3rem;
+        height: 8rem;
+        background: url("../images/logo.png") no-repeat left center;
+        margin: 0;
+        float: left;
+        //border: solid 1px green;
+    }
+    ul {
+        height: 8rem;
+        float: right;
+        //border: solid 1px red;
+        display: flex;
+        align-items: center;
+        li {
+            padding: 10px 15px;
+        }
+        li:hover {
+            background-color: #F4F4F4;
+        }
+    }
+}
+
+/*轮播图部分*/
+.swiper-container {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: white;
+    border: saddlebrown solid 1px;
+}
+.menu {
+    position: absolute;
+    left: 5.5%;
+    top: 12.5rem;
+    z-index: 10;
+    width: 23.5rem;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    li {
+        height: 8.7rem;
+        line-height: 8.7rem;
+        border-bottom: solid 1px white;
+        font-size: 1.6rem;
+        color: white;
+    }
+    li:last-of-type {
+        border: 0;
+    }
+}
+
+//鼠标滑过轮播图背景变绿
+.bg-green {
+    background-color: #44AA77;
+}
+
+#hidden-menu {
+    position: absolute;
+    left: 22.8%;
+    top: 12.5rem;
+    z-index: 10;
+    #fix-mp {
+        width: 50rem;
+        height: 30rem;
+        background-color: darkgray;
+        display: none;
+    }
+    #fix-com {
+        width: 50rem;
+        height: 40rem;
+        background-color: greenyellow;
+        display: none;
+    }
+    #sell-mp {
+        width: 50rem;
+        height: 35rem;
+        background-color: burlywood;
+        display: none;
+    }
+    #sell-mp2 {
+        width: 50rem;
+        height: 30rem;
+        background-color: skyblue;
+        display: none;
+    }
+}
+
+/*手机服务部分*/
+.mpsever {
+    text-align: center;
+    border: saddlebrown solid 1px;
+}
+
+/*优品精选*/
+#youpin {
+    height: 36rem;
+    #phone_lists {
+        height: 30rem;
+        background-color: white;
+        .phone-recovery {
+            height: 30rem;
+            padding: 0;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                padding-top: 5rem;
+                border-right: solid 1px #F7F7F7;
+                img {
+                    width: 80%;
+                    margin-bottom: 1.5rem;
+                }
+                p:last-of-type {
+                    color: orangered;
+                }
+            }
+        }
+        .phone-recovery:nth-of-type(4) {
+            img {
+                width: 40%;
+            }
+        }
+
+    }
+}
+
+/*到店维修*/
+#h3 {
+    padding: 0 5%;
+}
+#instore {
+    background-color: white;
+    padding-top: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    form {
+        width: 100%;
+        margin: 1.5rem 0;
+        select {
+            width: 15rem;
+            height: 4rem;
+            padding: 0.5rem 1rem;
+            margin-right: 1rem;
+            border: solid 1px #118855;
+        }
+        input {
+            width: 40rem;
+            height: 4rem;
+            padding: 0.5rem 1rem;
+            border: solid 1px #118855;
+        }
+        button {
+            width: 15rem;
+            height: 4rem;
+            margin-left: -0.5rem;
+            border: 0;
+            background-color: #118855;
+            font-size: 1.8rem;
+            color: white;
+        }
+    }
+    #store-left {
+        width: 72%;
+        border: solid 1px red;
+        ul {
+            width: 100%;
+            height: 4rem;
+            line-height: 4rem;
+            display: flex;
+            border: solid 1px darkgray;
+            background-color: #F7F7F7;
+            li {
+                width: 13%;
+                text-align: center;
+                input {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    vertical-align: -0.3rem;
+                }
+            }
+            li:hover {
+                border: solid 1px darkgray;
+                background-color: white;
+                color:;
+            }
+        }
+        /*店铺展示部分*/
+        #store-list {
+            .store-list-item {
+                padding: 1.5rem 0;
+                display: flex;
+                border-bottom: solid 1px darkgray;
+                .store-img {
+                    border: solid 1px darkgray;
+                    width: 10%;
+                    margin-right: 2rem;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .store-info {
+                    line-height: 2;
+                    .store-name {
+                        color: #118855;
+                        font-size: 1.6rem;
+                        span {
+                            color: #3B3B3B;
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+            .store-list-item:hover {
+                background-color: #F7F7F7;
+            }
+        }
+    }
+    #store-right {
+        width: 26%;
+        margin-left: 2rem;
+        border: solid 1px yellow;
+    }
+}
+
+/*--------分页----------*/
+.page_div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-family: "microsoft yahei";
+    color: #666666;
+    margin-right: 10px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    a {
+        min-width: 44px;
+        height: 44px;
+        border: 1px solid #999!important;
+        text-align: center;
+        margin: 0 4px;
+        cursor: pointer;
+        line-height: 44px;
+        color: #666666;
+        font-size: 16px;
+        display: inline-block;
+    }
+}
+/*
+ * 页数按钮样式
+ */
+
+#firstPage,
+#lastPage {
+    display: none;
+    width: 50px;
+    color: #0073A9;
+    border: 1px solid #999!important;
+}
+
+#nextPage,
+#prePage {
+    width: 70px;
+    color: #999;
+    border: 1px solid #999!important;
+}
+
+.page_div .current {
+    background-color: #FC6621;
+    border-color: #FC6621 !important;
+    color: #FFFFFF;
+}
+
+.totalPages {
+    margin: 0 10px;
+}
+
+.totalPages span,
+.totalSize span {
+    color: #999;
+    margin: 0 5px;
+}

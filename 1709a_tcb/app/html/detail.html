@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>手机详情页</h1>
+		<img src="" class = "phone-avatar"/>
+		<p class="phone_name"></p>
+		<p class="phone_price"></p>
+		<div class="phone_detail">
+			<img src=""/>
+		</div>
+		
+	</body>
+	<script src="../../lib/bootstrap/js/jquery-3.2.1.min.js" ></script>
+	<script src="../../lib/getparam.js"></script>
+		<script type="text/javascript">
+			//从localStorage上获取之前保存的商品信息
+			var detail = window.localStorage.detail;
+			detail =JSON.parse(detail);
+			
+			//从url上获得id
+			var url = location.href;
+			var id = getParam(url,'id')
+//			console.log("id:",id);
+			
+			//遍历商品数组，根据id找对应的商品数据
+//			console.log(detail.data.length)
+			var product;
+			for (var i = 0; i < detail.data.length; i++) {
+				var idz = detail.data[i].id;
+//				console.log(idz)
+				if(id == idz){
+					product = detail.data[i];
+//					console.log(product.imgurl)
+				}
+			}
+			
+			$(".phone-avatar").attr("src",product.imgurl);
+			$(".phone_name").text(product.name);
+			$(".phone_price").text(product.price);
+			$(".phone-detail img").attr("src",product.detail);
+			
+			
+		</script>
+</html>

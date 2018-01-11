@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../lib/swiper/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../lib/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<script src="../../lib/baiduTemplate.js"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<header>
+			<div class="header_left">
+				<span>北京<a href="#">[切换城市]</a></span>
+				<a href="#">同城帮首页</a>
+			</div>
+			<ul>
+				<li>
+					<a href="#/login">登录</a>
+				</li>
+				<li>
+					<a href="#/reg">注册</a>
+				</li>
+				<li>
+					<a href="#/indent">我的订单</a>
+				</li>
+				<li>
+					<a href="#/service">在线客服(9:00-21:00)</a>
+				</li>
+				<li>
+					<a href="#/client">客户服务 ▼</a>
+				</li>
+				<li>
+					<a href="#/forum">论坛</a>
+				</li>
+				<li>
+					<a href="#advise">投诉建议</a>
+				</li>
+			</ul>
+		</header>
+
+		<!--导航栏部分-->
+		<nav>
+			<h1></h1>
+			<ul>
+				<li>
+					<a href="#/">二手优品</a>
+				</li>
+				<li>
+					<a href="#/">手机回收</a>
+				</li>
+				<li>
+					<a href="#/">手机维修</a>
+				</li>
+				<li>
+					<a href="#/">电脑维修</a>
+				</li>
+				<li>
+					<a href="#/">依旧换新</a>
+				</li>
+				<li>
+					<a href="#/">手机租用</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- 轮播图部分Swiper -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="../images/nav01.png" /></div>
+				<div class="swiper-slide"><img src="../images/nav02.jpg" /></div>
+				<div class="swiper-slide"><img src="../images/nav03.png" /></div>
+				<div class="swiper-slide"><img src="../images/nav04.png" /></div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+
+		</div>
+
+		<!--轮播图菜单部分-->
+		<ul class="menu">
+			<li class="menu-item">修手机/Pad</li>
+			<li class="menu-item">修电脑</li>
+			<li class="menu-item">卖手机/电脑</li>
+			<li class="menu-item">买二手机</li>
+		</ul>
+
+		<!--轮播图隐藏菜单部分-->
+		<div id="hidden-menu">
+			<div class="hidden-menu-item" id="fix-mp">111</div>
+			<div class="hidden-menu-item" id="fix-com">222</div>
+			<div class="hidden-menu-item" id="sell-mp">333</div>
+			<div class="hidden-menu-item" id="sell-mp2">444</div>
+		</div>
+
+		<!--手机服务部分-->
+		<div class="mpsever">
+			<img src="../../dist/images/shouji1.jpg" />
+			<img src="../../dist/images/shouji2.jpg" />
+			<img src="../../dist/images/shouji3.png" />
+			<img src="../../dist/images/shouji4.jpg" />
+		</div>
+
+		<!--热门手机回收部分-->
+		<!--<section>
+			<h3>热门手机回收</h3>
+			<div class="row">
+				<div class="col-md-2 phone-recovery"><img src="../../dist/images/tubiao01.png" /></div>
+				<div class="col-md-2 phone-recovery">
+					<a href="#"><img src="../../dist/images/mp01.jpg" /></a>
+					<p>苹果iPhone 6</p>
+				</div>
+				<div class="col-md-2 phone-recovery">
+					<a href="#"><img src="../../dist/images/mp02.jpg" /></a>
+					<p>苹果iPhone 5s</p>
+				</div>
+				<div class="col-md-2 phone-recovery">
+					<a href="#"><img src="../../dist/images/mp03.jpg" /></a>
+					<p>小米M4</p>
+				</div>
+				<div class="col-md-2 phone-recovery">
+					<a href="#"><img src="../../dist/images/mp04.jpg" /></a>
+					<p>华为 Mate 7</p>
+				</div>
+				<div class="col-md-2 phone-recovery">
+					<a href="#"><img src="../../dist/images/mp05.jpg" /></a>
+					<p>魅族 MX5</p>
+				</div>
+			</div>
+		</section>-->
+
+		<!--优品精选-->
+		<section id="youpin">
+			<h3>优品精选</h3>
+			<div class="row" id="phone_lists"></div>
+		</section>
+
+		<!--到店维修部分-->
+		<h3 id="h3">到店维修</h3>
+		<section id="instore">
+			<form>
+				<select>
+					<option>北京</option>
+					<option>天津</option>
+					<option>河南</option>
+					<option>河北</option>
+				</select>
+				<select>
+					<option>请选择区县</option>
+					<option>昌平</option>
+					<option>海淀</option>
+					<option>朝阳</option>
+				</select>
+				<input type="search" name="search" id="search" value="" placeholder="输入您的位置查找附近的商家" />
+				<button>搜索</button>
+			</form>
+			<!--左边-->
+			<div id="store-left">
+				<ul>
+					<li>默认排序</li>
+					<li>按成交量</li>
+					<li>按人气</li>
+					<li><input type="checkbox" name="" id="" value="" />先行赔付</li>
+					<li>地图模式</li>
+				</ul>
+
+				<!--店铺展示部分-->
+				<div id="store-list"></div>
+
+				<!--分页-->
+				<div id="page" class="page_div"></div>
+			</div>
+			<!--右边-->
+			<div id="store-right"></div>
+		</section>
+
+		<!--热门手机回收数据的页面渲染部分-->
+
+		<!--优品精选手机数据的页面渲染部分-->
+		<script type="text/html" id="phone_temp">
+			<div class="col-md-2 phone-recovery"><img src="../images/tubiao02.png" /></div>
+			<%for (var i = 0; i < data.length; i++) {%>
+			<div class="col-md-2 phone-recovery" id="phone-list-item">
+				<a href="http://127.0.0.1:8020/1709a_tcb/dist/html/detail.html?id=<%=data[i].id%>">
+					<img src="<%= data[i].imgurl %>" />
+					<p>
+						<%= data[i].short_name %>
+					</p>
+					<p>￥
+						<%= data[i].price %>
+					</p>
+				</a>
+			</div>
+			<%}%>
+		</script>
+
+		<!--到店维修的店铺展示部分-->
+		<script type="text/html" id="store-list-item-temp">
+			<%for(var i = 0;i < data.length;i++){%>
+			<div class="store-list-item">
+				<div class="store-img"><img src="<%= data[i].imgurl%>" /></div>
+				<div class="store-info">
+					<div class="store-name">
+						<%= data[i].name%> <span>店铺等级:<%= data[i].grade%></span></div>
+					<div class="store-business">业务:
+						<%= data[i].business%>
+					</div>
+					<div class="store-adress">地址:
+						<%= data[i].adress%>
+					</div>
+				</div>
+			</div>
+			<%}%>
+		</script>
+
+	</body>
+	<script src="../../lib/swiper/js/swiper.min.js"></script>
+	<script src="../../lib/swiper/js/jquery-1.12.3.js"></script>
+	<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../lib/paging.js"></script>
+	<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
